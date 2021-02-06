@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+  </head>
+  <body class="text-center">
+    <style>
+      html, body{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        background-image: url('../assets/images/book03.jpg');
+      }
+    </style>
+    <app-navbar></app-navbar>
+
+    <div class="text-center">
+    <br/><br/><br/><br/><br/>
+    <table class="table table-striped table-dark table-bordered table-sm">
+        <thead>
+          <tr>
+            <th scope="col" >Id</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Ano</th>
+            <th scope="col">Genero</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let livro of livros.response.livros">
+            <th scope="row">1</th>
+            <td>{{livro.id_livro}}</td>
+            <td>{{livro.titulo}}</td>
+            <td>{{livro.autor}}</td>
+            <td>{{livro.ano}}</td>
+            <td>{{livro.categ}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-sm btn-primary " routerLink="/novoliv">Novo</button><br/><br/>
+    
+      <br/><br/>
+      </div>
+  </body>    
+</html>
+
